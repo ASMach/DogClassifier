@@ -72,13 +72,12 @@ def get_pet_labels(image_dir):
                 continue
            # Build pet labels from file name
            words = file.lower().split("_")
-           label = ""
            # Loops to check if word in pet name is only
            # alphabetic characters - if true append word
            # to pet_name separated by trailing space 
            for word in words:
                if word.isalpha():
-                   label += word + " "
+                   pet_label += word + " "
 
            # If filename doesn't already exist in dictionary add it and it's
            # pet label - otherwise print an error message because indicates 
